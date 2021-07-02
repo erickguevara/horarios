@@ -86,7 +86,7 @@
                headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
-               url:'/TC3/public/admin/horarios/table',
+               url:'{{ route('admin.horarios.table') }}',
                data:{ambiente:$('select[name="id_ambiente"] option:selected').val(),semestre:$('select[name="id_semestre"] option:selected').val()},
                success:function(data) {
                   $("#result").html(data);
